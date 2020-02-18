@@ -1,7 +1,8 @@
 import ReactFullpage from "@fullpage/react-fullpage"
 import React from "react"
 import "../styles/global.css"
-import "font-awesome/css/font-awesome.min.css"
+import MixGallery from "../components/videoGallery"
+import SiteMetadata from "../components/SEO"
 
 const fullpageOptions = {
   // anchors: ["page1", "page2", "page3", "page4", "page5"],
@@ -24,21 +25,31 @@ const FullpageWrapper = fullpageProps => (
       }
       return (
         <div id="fullpage-wrapper">
+          <SiteMetadata />
           <section className="section" id="page1">
-            <div class="overlay"></div>
-            <div class="content">
+            <div className="overlay"></div>
+            <div className="content">
               <div className="container clearfix">
                 <div className="row">
                   <div className="col-lg-8 offset-lg-2 col-md-12">
                     <p>Oh, coucou !</p>
-                    <h1>Moi c'est VOM</h1>
+                    <h1>
+                      Moi c'est{" "}
+                      <img
+                        src="img/logo.png"
+                        className="img-fluid"
+                        id="logo"
+                        alt="VOM"
+                        title="VOM Logo, DJ Club, Discomobile"
+                      />
+                    </h1>
+
                     <h2 className="heading_subtitle">
-                      Près de <em>Paris</em>, autour de
-                      <em>Fontainebleau</em> en <em>Seine et Marme</em> ?
-                      <em>Soirée de rallye</em>, <em>soirée privée</em>,
-                      <em>anniversaire</em>, "<em>clubbing</em>" ? Je vais
-                      surement pouvoir t'aider à mettre le feu à ton évènement,
-                      enfin j'espère !
+                      Près de <em>Paris</em>, autour de <em>Fontainebleau</em>{" "}
+                      en <em>Seine et Marne</em> ? <em>Soirée de rallye</em>,{" "}
+                      <em>soirée privée</em>, <em>anniversaire</em>, "
+                      <em>clubbing</em>" ? Je vais surement pouvoir t'aider à
+                      mettre le feu à ton évènement !
                     </h2>
                   </div>
                 </div>
@@ -50,14 +61,13 @@ const FullpageWrapper = fullpageProps => (
           </section>
 
           <section className="section" id="page2">
-            <div class="content">
+            <div className="content">
               <div className="container clearfix">
                 <div className="row">
                   <div className="col-lg-6">
-                    <h2 className="heading">T'es qui toi ?</h2>
+                    <h2 className="heading">Qui es tu ?</h2>
                     <p className="lead">
-                      Un <strong>DJ</strong>, comme tu aurais pu t'en douter...
-                      mais pas que !
+                      Un <strong>DJ</strong>, sans suprises... mais pas que !
                     </p>
                     <p className="text-justify">
                       Depuis tout petit, la musique est une de mes plus grandes
@@ -104,7 +114,7 @@ const FullpageWrapper = fullpageProps => (
           </section>
 
           <section className="section " id="page3">
-            <div class="content">
+            <div className="content">
               <div className="container clearfix">
                 <div className="row services">
                   <div className="col-lg-12">
@@ -152,7 +162,7 @@ const FullpageWrapper = fullpageProps => (
                       <div className="col-md-4">
                         <div className="box">
                           <div className="icon">
-                            <i className="fa fa-lightbulb-o"></i>
+                            <i className="fa fa-lightbulb"></i>
                           </div>
                           <h4 className="heading">Et la lumière fût</h4>
                           <p className="text-justify">
@@ -230,14 +240,133 @@ const FullpageWrapper = fullpageProps => (
                     </h2>
                     <p className="text-center text-justify">
                       Parce qu'on peut faire autre chose que mettre les mains en
-                      l'air quand on est DJ, voilà un exmple de mix filmé dans
-                      le studio avec plusieurs techniques utilisées : scratch,
-                      acapella mixing, beatjuggling... Sans ne jamais perdre de
-                      vue le point principal : la sélection musicale. Le mix de
-                      ce mois-ci est plutôt axé hip hop. Attention certains
-                      morceaux sont "EXPLICIT".
+                      l'air quand on est DJ, voilà quelques exemples de mix un
+                      peu plus techniques filmés dans le studio.
                     </p>
                   </div>
+                </div>
+                <MixGallery />
+              </div>
+            </div>
+          </section>
+
+          <section className="section" id="page6">
+            <div className="content">
+              <div className="container clearfix">
+                <div className="row">
+                  <div className="col-lg-12">
+                    <h2 className="heading">Me contacter</h2>
+                    <div className="row">
+                      <div className="col-lg-6">
+                        <form
+                          id="contact-form"
+                          method="post"
+                          action="contact.php"
+                          className="contact-form"
+                          onsubmit="return checkCaptcha();"
+                        >
+                          <div className="controls">
+                            <div className="row">
+                              <div className="col-md-6">
+                                <div className="form-group">
+                                  <label for="cf_surname">Prénom *</label>
+                                  <input
+                                    type="text"
+                                    name="cf_surname"
+                                    placeholder="Entrez votre prénom"
+                                    required="required"
+                                    className="form-control"
+                                  />
+                                </div>
+                              </div>
+                              <div className="col-md-6">
+                                <div className="form-group">
+                                  <label for="cf_name">Nom de famille *</label>
+                                  <input
+                                    type="text"
+                                    name="cf_name"
+                                    placeholder="Entrez votre nom de famille"
+                                    required="required"
+                                    className="form-control"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="form-group">
+                              <label for="cf_email">Email *</label>
+                              <input
+                                type="email"
+                                name="cf_email"
+                                placeholder="Entrez votre email"
+                                required="required"
+                                className="form-control"
+                              />
+                            </div>
+                            <div className="form-group">
+                              <label for="cf_message">Votre message *</label>
+                              <textarea
+                                rows="4"
+                                name="cf_message"
+                                placeholder="Votre message !"
+                                required="required"
+                                className="form-control"
+                              ></textarea>
+                            </div>
+                            <div
+                              className="g-recaptcha form-group"
+                              data-sitekey="6LclF30UAAAAALzEKk3uNkGundeTpsRBxkgK7RF-"
+                            ></div>
+                            <div className="text-center">
+                              <input
+                                type="submit"
+                                name="send"
+                                value="Envoyer"
+                                className="btn btn-primary btn-block"
+                              />
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div
+                        className="col-lg-6 text-justify pt-lg-4"
+                        id="contact-text"
+                      >
+                        <p>
+                          N'hésitez pas à me contacter si vous souhaitez un
+                          quelconque renseignement en utilisant le formulaire
+                          situé ci-contre.
+                          <br />
+                          Je vous répondrai le plus rapidement possible !
+                        </p>
+
+                        <div className="social">
+                          <h3>Connect with me</h3>
+                          <p className="social">
+                            <a
+                              href="http://www.facebook.com/vommusicfr/"
+                              title="facebook"
+                              rel="external"
+                            >
+                              <i className="fab fa-facebook-f"></i>
+                            </a>
+                            <a
+                              href="https://www.youtube.com/channel/UCwOH_5KnRSSTInYghCruWng"
+                              title="youtube"
+                              rel="external"
+                            >
+                              <i className="fab fa-youtube"></i>
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="row d-flex justify-content-center copyright">
+                  <p className="text-center">
+                    &copy;2018 <strong>VOM</strong>
+                  </p>
                 </div>
               </div>
             </div>

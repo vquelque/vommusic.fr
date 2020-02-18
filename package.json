@@ -14,12 +14,22 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "@fullpage/react-fullpage": "^0.1.17",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.18.12",
+    "gatsby-image": "^2.2.41",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-remark-responsive-iframe": "^2.2.32",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-json": "^2.2.26",
+    "gatsby-transformer-remark": "^2.6.51",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

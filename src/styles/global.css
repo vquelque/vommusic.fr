@@ -151,7 +151,6 @@ p.social a.email {
 }
 
 .copyright {
-  margin-top: 40px;
   color: #999999;
   font-style: italic;
 }
@@ -162,21 +161,6 @@ p.social a.email {
   color: #999999;
 }
 
-@media (max-width: 991px) {
-  .copyright p.credit {
-    text-align: center !important;
-  }
-}
-@media (min-width: 1200px) {
-  .copyright {
-    margin-top: 60px;
-  }
-}
-@media (max-width: 991px) {
-  .copyright {
-    text-align: center !important;
-  }
-}
 #page1 {
   text-align: center;
   background: url("/img/background.jpg") center center no-repeat;

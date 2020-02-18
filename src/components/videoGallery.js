@@ -16,7 +16,7 @@ export default ({ children }) => {
   `)
   return (
     <div className="mix-gallery row d-flex justify-content-center">
-      {data.allDemoMixJson.edges.map(item => {
+      {data.allDemoMixJson.edges.map((item, key) => {
         return (
           <iframe
             src={item.node.url}
@@ -24,6 +24,7 @@ export default ({ children }) => {
             width="300"
             height="150"
             className="mix-item "
+            key={key}
           ></iframe>
         )
       })}

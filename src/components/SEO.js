@@ -41,7 +41,11 @@ const SiteMetadata = ({ pathname, locale }) => {
         async
         src="https://www.googletagmanager.com/gtag/js?id=UA-114030019-1"
       ></script>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <script
+        src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async
+        defer
+      ></script>
       {/* Google fonts - Montserrat for headings, Cardo for copy */}
       <link
         rel="stylesheet"

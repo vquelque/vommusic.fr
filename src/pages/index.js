@@ -3,6 +3,7 @@ import React from "react"
 import "../styles/global.css"
 import MixGallery from "../components/videoGallery"
 import SiteMetadata from "../components/SEO"
+import Contact from "../components/contact"
 
 const fullpageOptions = {
   // anchors: ["page1", "page2", "page3", "page4", "page5"],
@@ -55,7 +56,7 @@ const FullpageWrapper = fullpageProps => (
                 </div>
               </div>
             </div>
-            <div className="icon faa-float animated">
+            <div className="icon">
               <i className="fa fa-angle-double-down"></i>
             </div>
           </section>
@@ -253,119 +254,47 @@ const FullpageWrapper = fullpageProps => (
           <section className="section" id="page6">
             <div className="content">
               <div className="container clearfix">
+                <h2 className="heading">Me contacter</h2>
                 <div className="row">
-                  <div className="col-lg-12">
-                    <h2 className="heading">Me contacter</h2>
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <form
-                          id="contact-form"
-                          method="post"
-                          action="contact.php"
-                          className="contact-form"
-                          onsubmit="return checkCaptcha();"
-                        >
-                          <div className="controls">
-                            <div className="row">
-                              <div className="col-md-6">
-                                <div className="form-group">
-                                  <label for="cf_surname">Prénom *</label>
-                                  <input
-                                    type="text"
-                                    name="cf_surname"
-                                    placeholder="Entrez votre prénom"
-                                    required="required"
-                                    className="form-control"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-md-6">
-                                <div className="form-group">
-                                  <label for="cf_name">Nom de famille *</label>
-                                  <input
-                                    type="text"
-                                    name="cf_name"
-                                    placeholder="Entrez votre nom de famille"
-                                    required="required"
-                                    className="form-control"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <div className="form-group">
-                              <label for="cf_email">Email *</label>
-                              <input
-                                type="email"
-                                name="cf_email"
-                                placeholder="Entrez votre email"
-                                required="required"
-                                className="form-control"
-                              />
-                            </div>
-                            <div className="form-group">
-                              <label for="cf_message">Votre message *</label>
-                              <textarea
-                                rows="4"
-                                name="cf_message"
-                                placeholder="Votre message !"
-                                required="required"
-                                className="form-control"
-                              ></textarea>
-                            </div>
-                            <div
-                              className="g-recaptcha form-group"
-                              data-sitekey="6LclF30UAAAAALzEKk3uNkGundeTpsRBxkgK7RF-"
-                            ></div>
-                            <div className="text-center">
-                              <input
-                                type="submit"
-                                name="send"
-                                value="Envoyer"
-                                className="btn btn-primary btn-block"
-                              />
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div
-                        className="col-lg-6 text-justify pt-lg-4"
-                        id="contact-text"
-                      >
-                        <p>
-                          N'hésitez pas à me contacter si vous souhaitez un
-                          quelconque renseignement en utilisant le formulaire
-                          situé ci-contre.
-                          <br />
-                          Je vous répondrai le plus rapidement possible !
-                        </p>
+                  <div className="col-lg-6">
+                    <Contact />
+                  </div>
+                  <div
+                    className="col-lg-6 text-justify pt-lg-4"
+                    id="contact-text"
+                  >
+                    <p>
+                      N'hésitez pas à me contacter si vous souhaitez un
+                      quelconque renseignement en utilisant le formulaire situé
+                      ci-contre.
+                      <br />
+                      Je vous répondrai le plus rapidement possible !
+                    </p>
 
-                        <div className="social">
-                          <h3>Connect with me</h3>
-                          <p className="social">
-                            <a
-                              href="http://www.facebook.com/vommusicfr/"
-                              title="facebook"
-                              rel="external"
-                            >
-                              <i className="fab fa-facebook-f"></i>
-                            </a>
-                            <a
-                              href="https://www.youtube.com/channel/UCwOH_5KnRSSTInYghCruWng"
-                              title="youtube"
-                              rel="external"
-                            >
-                              <i className="fab fa-youtube"></i>
-                            </a>
-                          </p>
-                        </div>
-                      </div>
+                    <div className="social">
+                      <h3>Connect with me</h3>
+                      <p className="social">
+                        <a
+                          href="http://www.facebook.com/vommusicfr/"
+                          title="facebook"
+                          rel="external"
+                        >
+                          <i className="fab fa-facebook-f"></i>
+                        </a>
+                        <a
+                          href="https://www.youtube.com/channel/UCwOH_5KnRSSTInYghCruWng"
+                          title="youtube"
+                          rel="external"
+                        >
+                          <i className="fab fa-youtube"></i>
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
-
-                <div className="row d-flex justify-content-center copyright">
-                  <p className="text-center">
-                    &copy;2018 <strong>VOM</strong>
+                <div className="copyright text-center">
+                  <p>
+                    &copy;2020 <strong>VOM</strong>
                   </p>
                 </div>
               </div>

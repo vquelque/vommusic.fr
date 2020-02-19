@@ -616,6 +616,8 @@ a.list-group-item.active > .badge.badge-pill,
 
 .mix-item {
   margin: 20px;
+  height: 220px;
+  width: 400px;
 }
 
 .contact-email {

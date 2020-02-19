@@ -21,10 +21,9 @@ export default ({ children }) => {
           <iframe
             src={item.node.url}
             title={item.node.title}
-            width="300"
-            height="150"
-            className="mix-item "
+            className="mix-item"
             key={key}
+            allowFullScreen
           ></iframe>
         )
       })}

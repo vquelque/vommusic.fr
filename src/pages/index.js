@@ -17,13 +17,6 @@ const FullpageWrapper = fullpageProps => (
   <ReactFullpage
     {...fullpageOptions}
     render={({ state, fullpageApi }) => {
-      console.log("render prop change", state) // eslint-disable-line no-console
-
-      if (state.callback === "onLeave") {
-        if (state.direction === "down") {
-          console.log("going down..." + state.origin.index)
-        }
-      }
       return (
         <div id="fullpage-wrapper">
           <SiteMetadata />

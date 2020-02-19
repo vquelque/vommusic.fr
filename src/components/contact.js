@@ -14,7 +14,9 @@ class Contact extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  recaptchaLoaded = () => console.log("recaptcha loaded")
+  recaptchaLoaded() {
+    console.log("recaptcha loaded")
+  }
 
   verifyCallback = token =>
     this.setState({ captcha_checked: true, "g-recaptcha-reponse": token })

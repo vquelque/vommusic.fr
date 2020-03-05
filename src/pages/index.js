@@ -76,10 +76,10 @@ const FullpageWrapper = fullpageProps => (
                       compétences musicales. Aujourd'hui, ce que j'aime, c'est
                       partager ma passion pour la musique et faire de mon mieux
                       pour que le public passe une <em>soirée inoubliable</em> !
-                      Le
+                      Le{" "}
                       <em>
                         mélange des styles musicaux, des années 80 à la dance
-                        actuelle en passant par la House et le Hip Hop{" "}
+                        actuelle en passant par la House et le Hip Hop
                       </em>
                       fait mon plus grand bonheur. J'ai aujourd'hui eu la chance
                       de mixer pour des <em>public très variés</em> dans un
@@ -259,7 +259,8 @@ const FullpageWrapper = fullpageProps => (
                     <p>
                       N'hésitez pas à me contacter si vous souhaitez un
                       quelconque renseignement en utilisant le formulaire situé
-                      ci-contre.
+                      ci-contre. Pour une demande de devis, merci de spécifier
+                      le lieu ainsi que le nombre approximatif de personnes.
                       <br />
                       Je vous répondrai le plus rapidement possible !
                     </p>

@@ -98,7 +98,7 @@ class Contact extends Component {
           </div>
           <div className="form-group">
             <Recaptcha
-              sitekey="6LclF30UAAAAALzEKk3uNkGundeTpsRBxkgK7RF-"
+              sitekey={process.env.RECAPTCHA_PUB_KEY}
               render="explicit"
               onloadCallback={this.recaptchaLoaded}
               verifyCallback={this.verifyCallback}

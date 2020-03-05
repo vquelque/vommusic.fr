@@ -80,12 +80,12 @@ const FullpageWrapper = fullpageProps => (
                       <em>
                         mélange des styles musicaux, des années 80 à la dance
                         actuelle en passant par la House et le Hip Hop
-                      </em>
+                      </em>{" "}
                       fait mon plus grand bonheur. J'ai aujourd'hui eu la chance
                       de mixer pour des <em>public très variés</em> dans un
                       panel de lieux important (du simple nightclub au palace 5
-                      étoiles) mais
-                      <em>les soirées étudiantes et les soiréees de rallye</em>
+                      étoiles) mais{" "}
+                      <em>les soirées étudiantes et les soiréees de rallye</em>{" "}
                       restent le type de soirée où j'ai le plus d'expérience.
                       Enfin, je suis (avant tout) étudiant en école d'ingénieur.
                     </p>

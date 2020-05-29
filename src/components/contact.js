@@ -1,121 +1,90 @@
-import React, { Component } from "react"
-import Recaptcha from "react-recaptcha"
+import React, { useState } from "react"
+import axios from "axios"
 
-class Contact extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      captcha_checked: false,
-    }
-    this.recaptchaLoaded = this.recaptchaLoaded.bind(this)
-    this.verifyCallback = this.verifyCallback.bind(this)
-  }
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
-  recaptchaLoaded() {
-    console.log("recaptcha loaded")
-  }
-
-  verifyCallback = token =>
-    this.setState({ captcha_checked: true, "g-recaptcha-reponse": token })
-
-  handleRecaptcha = value => {
-    this.setState({ "g-recapatcha-response": value })
-  }
-
-  handleSubmit = e => {
-    if (!this.state.captcha_checked) {
-      e.preventDefault()
-      alert(
-        "Merci de valider le captcha avec de tenter d'envoyer le formulaire."
-      )
-      return
+const Contact = () => {
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  })
+  const handleServerResponse = (ok, msg, form) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    })
+    if (ok) {
+      form.reset()
     }
   }
-
-  render() {
-    const { cf_surname, cf_name, cf_email, cf_message } = this.state
-    return (
-      <form
-        id="contact-form"
-        method="post"
-        action="contact.php"
-        className="contact-form"
-        onSubmit={this.handleSubmit}
-      >
-        <div className="controls">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="form-group">
-                <label htmlFor="cf_surname">Prénom *</label>
-                <input
-                  type="text"
-                  name="cf_surname"
-                  value={cf_surname}
-                  placeholder="Entrez votre prénom"
-                  required="required"
-                  className="form-control"
-                />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="form-group">
-                <label htmlFor="cf_name">Nom de famille *</label>
-                <input
-                  type="text"
-                  name="cf_name"
-                  value={cf_name}
-                  placeholder="Entrez votre nom de famille"
-                  required="required"
-                  className="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="form-group">
-            <label htmlFor="cf_email">Email *</label>
-            <input
-              type="email"
-              name="cf_email"
-              value={cf_email}
-              placeholder="Entrez votre email"
-              required="required"
-              className="form-control"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="cf_message">Votre message *</label>
-            <textarea
-              rows="4"
-              name="cf_message"
-              value={cf_message}
-              placeholder="Votre message !"
-              required="required"
-              className="form-control"
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <Recaptcha
-              sitekey={process.env.RECAPTCHA_PUB_KEY}
-              render="explicit"
-              onloadCallback={this.recaptchaLoaded}
-              verifyCallback={this.verifyCallback}
-            />
-          </div>
-          <div className="text-center">
-            <input
-              type="submit"
-              name="send"
-              value="Envoyer"
-              className="btn btn-primary btn-block"
-            />
-          </div>
+  const handleOnSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    setServerState({ submitting: true })
+    axios({
+      method: "post",
+      url: "https://getform.io/f/8e9a00ca-bcff-41d7-9599-c6861ccff761",
+      data: new FormData(form),
+    })
+      .then(r => {
+        handleServerResponse(true, "Bien reçu, merci!", form)
+      })
+      .catch(r => {
+        handleServerResponse(false, r.response.data.error, form)
+      })
+  }
+  return (
+    <form id="contact-form" className="contact-form" onSubmit={handleOnSubmit}>
+      <div className="controls">
+        <div className="form-group">
+          <label htmlFor="name">Nom *</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Entrez votre nom"
+            required="required"
+            className="form-control"
+            aria-label="name placeholder"
+          />
         </div>
-      </form>
-    )
-  }
+        <div className="form-group">
+          <label htmlFor="email">Email *</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Entrez votre email"
+            required="required"
+            className="form-control"
+            aria-label="email placeholder"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Votre message *</label>
+          <textarea
+            rows="4"
+            name="message"
+            placeholder="Votre message !"
+            required="required"
+            className="form-control"
+            aria-label="message placeholder"
+          ></textarea>
+        </div>
+
+        <div className="text-center">
+          <input
+            type="submit"
+            value="Envoyer"
+            className="btn btn-primary btn-block"
+            aria-label="send button"
+            disabled={serverState.submitting}
+          />
+        </div>
+      </div>
+      {serverState.status && (
+        <p className={!serverState.status.ok ? "errorMsg" : ""}>
+          {serverState.status.msg}
+        </p>
+      )}
+    </form>
+  )
 }
 
 export default Contact

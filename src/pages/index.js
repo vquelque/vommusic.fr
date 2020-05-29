@@ -4,6 +4,7 @@ import "../styles/global.css"
 import MixGallery from "../components/videoGallery"
 import SiteMetadata from "../components/SEO"
 import Contact from "../components/contact"
+import Pricing from "../components/pricing"
 
 const fullpageOptions = {
   // anchors: ["page1", "page2", "page3", "page4", "page5"],
@@ -240,6 +241,17 @@ const FullpageWrapper = fullpageProps => (
                   </div>
                 </div>
                 <MixGallery />
+              </div>
+            </div>
+          </section>
+
+          <section className="section" id="page7">
+            <div className="content">
+              <div className="container clearfix">
+                <div>
+                  <h2 className="heading">Pricing: </h2>
+                  <Pricing />
+                </div>
               </div>
             </div>
           </section>

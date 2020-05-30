@@ -25,7 +25,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     // make sure to put last in the array
     {
-      resolve: ` gatsby-plugin-netlify-headers`,
+      resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
           "/*": ["Access-Control-Allow-Origin: *"],

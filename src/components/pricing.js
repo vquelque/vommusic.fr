@@ -1,64 +1,63 @@
 import React from "react"
 const Pricing = () => (
-  <div className="row">
+  <div className="row justify-content-center">
     <div className="col-lg-4">
       <div className="card mb-5 mb-lg-0">
         <div className="card-body">
           <h5 className="card-title text-muted text-uppercase text-center">
-            Free
+            Pack de base
           </h5>
-          <h6 className="card-price text-center">
-            $0<span className="period">/month</span>
-          </h6>
+          <h6 className="card-price text-center">650€</h6>
           <hr></hr>
           <ul className="fa-ul">
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              Single User
+              Système son RCF Evox 8
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              5GB Storage
+              Processeur d'enceintes DBX
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              Unlimited Public Projects
+              Micros UHF
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              Community Access
+              Mixage Yamaha MG10XU
             </li>
-            <li className="text-muted">
+            <li>
+              <span className="fa-li">
+                <i className="fas fa-check"></i>
+              </span>
+              Contrôleur Pioneer DDJ1000SRT
+            </li>
+            <li>
               <span className="fa-li">
                 <i className="fas fa-times"></i>
               </span>
-              Unlimited Private Projects
+              Éclairage Chauvet GigBar 2 (x2)
             </li>
-            <li className="text-muted">
+            <li>
               <span className="fa-li">
                 <i className="fas fa-times"></i>
               </span>
-              Dedicated Phone Support
+              5h d'animation
             </li>
-            <li className="text-muted">
+            <hr></hr>
+            <li>
               <span className="fa-li">
                 <i className="fas fa-times"></i>
               </span>
-              Free Subdomain
-            </li>
-            <li className="text-muted">
-              <span className="fa-li">
-                <i className="fas fa-times"></i>
-              </span>
-              Monthly Status Reports
+              Machine à fumée en option (+120€)
             </li>
           </ul>
         </div>
@@ -69,124 +68,70 @@ const Pricing = () => (
       <div className="card mb-5 mb-lg-0">
         <div className="card-body">
           <h5 className="card-title text-muted text-uppercase text-center">
-            Plus
+            Pack étendu
           </h5>
-          <h6 className="card-price text-center">
-            $9<span className="period">/month</span>
-          </h6>
+          <h6 className="card-price text-center">1000€</h6>
           <hr></hr>
           <ul className="fa-ul">
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              <strong>5 Users</strong>
+              Système son RCF Evox 8
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              50GB Storage
+              Processeur d'enceintes DBX
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              Unlimited Public Projects
+              Micros UHF
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              Community Access
+              Mixage Yamaha MG10XU
             </li>
             <li>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>
-              Unlimited Private Projects
+              Contrôleur Pioneer DDJ1000SRT
             </li>
             <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Dedicated Phone Support
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Free Subdomain
-            </li>
-            <li className="text-muted">
               <span className="fa-li">
                 <i className="fas fa-times"></i>
               </span>
-              Monthly Status Reports
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div className="col-lg-4">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title text-muted text-uppercase text-center">
-            Pro
-          </h5>
-          <h6 className="card-price text-center">
-            $49<span className="period">/month</span>
-          </h6>
-          <hr></hr>
-          <ul className="fa-ul">
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              <strong>Unlimited Users</strong>
+              Éclairage Chauvet GigBar 2 (x2)
             </li>
             <li>
               <span className="fa-li">
-                <i className="fas fa-check"></i>
+                <i className="fas fa-times"></i>
               </span>
-              150GB Storage
+              Machine à fumée ADJ fog fury jet
             </li>
             <li>
               <span className="fa-li">
-                <i className="fas fa-check"></i>
+                <i className="fas fa-times"></i>
               </span>
-              Unlimited Public Projects
+              Pars à led(x6)
             </li>
             <li>
               <span className="fa-li">
-                <i className="fas fa-check"></i>
+                <i className="fas fa-times"></i>
               </span>
-              Community Access
+              Lyres à LED(x2)
             </li>
             <li>
               <span className="fa-li">
-                <i className="fas fa-check"></i>
+                <i className="fas fa-times"></i>
               </span>
-              Unlimited Private Projects
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Dedicated Phone Support
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              <strong>Unlimited</strong> Free Subdomains
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-check"></i>
-              </span>
-              Monthly Status Reports
+              6h d'animation
             </li>
           </ul>
         </div>

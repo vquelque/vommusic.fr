@@ -196,7 +196,7 @@ const FullpageWrapper = fullpageProps => (
                       <iframe
                         src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fvommusic%2Fvom-live-06-01-18-mainstream-set%2F&hide_cover=1"
                         className="mixcloud-iframe"
-                        allowfullscreen
+                        allowFullScreen
                         scrolling="no"
                         title="mix1"
                       ></iframe>
@@ -205,7 +205,7 @@ const FullpageWrapper = fullpageProps => (
                       <iframe
                         src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fvommusic%2Fvom-live-13-10-17-clean-dance-mainstream-set%2F&hide_cover=1"
                         className="mixcloud-iframe"
-                        allowfullscreen
+                        allowFullScreen
                         scrolling="no"
                         title="mix2"
                       ></iframe>
@@ -214,7 +214,7 @@ const FullpageWrapper = fullpageProps => (
                       <iframe
                         src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fvommusic%2Fold-school-hip-hop-rb-mixed-by-vom%2F&amp;hide_cover=1"
                         className="mixcloud-iframe"
-                        allowfullscreen
+                        allowFullScreen
                         scrolling="no"
                         title="mix3"
                       ></iframe>
@@ -249,14 +249,29 @@ const FullpageWrapper = fullpageProps => (
             <div className="content">
               <div className="container clearfix">
                 <div>
-                  <h2 className="heading">Pricing: </h2>
+                  <h2 className="heading">Tarifs :</h2>
+                  <p className="text-justify">
+                    Convaincu ? Voisi mes tarifs donnés à titre indicatif. Un
+                    devis devra dans tous les cas être établi.{" "}
+                    <strong>
+                      Il est possible d'ajouter des options et d'obtenir
+                      uniquement certaines prestations comme l'animation par
+                      exemple.
+                    </strong>{" "}
+                    N'hésitez pas à me contacter <a href="#contact">ici</a> en
+                    détaillant votre demande pour tout renseignement. <br></br>
+                    <strong>65€</strong> par heure supplémentaire d'animation.
+                    Déplacements jusqu'à <strong>30km</strong> garantis. Me
+                    contacter au delà.
+                  </p>
+
                   <Pricing />
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="section" id="page6">
+          <section className="section" id="page6" data-anchor="contact">
             <div className="content">
               <div className="container clearfix">
                 <h2 className="heading">Me contacter</h2>

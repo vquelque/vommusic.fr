@@ -23,15 +23,15 @@ module.exports = {
     },
     `gatsby-transformer-json`,
     `gatsby-plugin-react-helmet`,
-    // make sure to put last in the array
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/*": ["Access-Control-Allow-Origin: *"],
-        },
-      },
-    },
+    // // make sure to put last in the array
+    // {
+    //   resolve: `gatsby-plugin-netlify`,
+    //   options: {
+    //     headers: {
+    //       "/*": ["Access-Control-Allow-Origin: *"],
+    //     },
+    //   },
+    // },
   ],
   siteMetadata: {
     title: "VOM - DJ Club & Discomobile - Animation, Sonorisation, Éclairage",

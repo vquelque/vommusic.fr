@@ -254,7 +254,7 @@ const FullpageWrapper = fullpageProps => (
                 <div>
                   <h2 className="heading">Tarifs :</h2>
                   <p className="text-justify">
-                    Convaincu ? Voisi mes tarifs donnés à titre indicatif. Un
+                    Convaincu ? Voici mes tarifs donnés à titre indicatif. Un
                     devis devra dans tous les cas être établi.{" "}
                     <strong>
                       Il est possible d'ajouter des options et d'obtenir

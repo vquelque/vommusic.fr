@@ -194,29 +194,32 @@ const FullpageWrapper = fullpageProps => (
                     </p>
                     <div className="row">
                       <iframe
-                        src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fvommusic%2Fvom-live-06-01-18-mainstream-set%2F&hide_cover=1"
                         className="mixcloud-iframe"
                         allowFullScreen
                         scrolling="no"
-                        title="mix1"
+                        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fvommusic%2Fvom-live-06-01-18-mainstream-set%2F"
+                        frameBorder="0"
+                        title="live mainstream set"
                       ></iframe>
                     </div>
                     <div className="row">
                       <iframe
-                        src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fvommusic%2Fvom-live-13-10-17-clean-dance-mainstream-set%2F&hide_cover=1"
                         className="mixcloud-iframe"
                         allowFullScreen
                         scrolling="no"
-                        title="mix2"
+                        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fvommusic%2Fvom-live-13-10-17-clean-dance-mainstream-set%2F"
+                        frameBorder="0"
+                        title="dance mainstream set"
                       ></iframe>
                     </div>
                     <div className="row">
                       <iframe
-                        src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fvommusic%2Fold-school-hip-hop-rb-mixed-by-vom%2F&amp;hide_cover=1"
                         className="mixcloud-iframe"
                         allowFullScreen
                         scrolling="no"
-                        title="mix3"
+                        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fvommusic%2Fold-school-hip-hop-rb-mixed-by-vom%2F"
+                        frameBorder="0"
+                        title="hip hop mix"
                       ></iframe>
                     </div>
                   </div>

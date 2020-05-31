@@ -264,7 +264,7 @@ const FullpageWrapper = fullpageProps => (
                     N'hésitez pas à me contacter <a href="#contact">ici</a> en
                     détaillant votre demande pour tout renseignement. <br></br>
                     <strong>65€</strong> par heure supplémentaire d'animation.
-                    Déplacements jusqu'à <strong>30km</strong> garantis. Me
+                    Déplacements jusqu'à <strong>30km</strong> inclus. Me
                     contacter au delà.
                   </p>
 

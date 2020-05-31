@@ -258,6 +258,10 @@ p.social a.email {
   font-size: 22px;
 }
 
+#page7 {
+  background-color: rgba(250, 235, 215, 0.582);
+}
+
 /* scaffolding */
 .fullpage-wrapper {
   font-family: "Roboto", sans-serif;

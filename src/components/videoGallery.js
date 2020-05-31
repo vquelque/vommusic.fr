@@ -23,7 +23,8 @@ export default ({ children }) => {
             title={item.node.title}
             className="mix-item"
             key={key}
-            allowFullScreen
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         )
       })}

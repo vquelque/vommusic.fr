@@ -37,6 +37,6 @@ module.exports = {
     title: "VOM - DJ Club & Discomobile - Animation, Sonorisation, Éclairage",
     description:
       "DJ, vous faire danser, c'est mon métier. Soirée privée, soirée d'entreprise, rallye, clubbing ? Disco, Pop, Hip Hop, House ? Il en faut pour tous les goûts. Disponible autour de Paris, en Seine et Marne 77, Fontainebleau, Melun.",
-    siteUrl: "http://www.vommusic.fr/",
+    siteUrl: "https://www.vommusic.fr/",
   },
 }

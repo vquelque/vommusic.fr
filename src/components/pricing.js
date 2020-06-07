@@ -44,7 +44,7 @@ const Pricing = () => (
               <span className="fa-li">
                 <i className="fas fa-times"></i>
               </span>
-              Éclairage Chauvet GigBar 2 (x2)
+              Éclairage Chauvet GigBar 2
             </li>
             <li>
               <span className="fa-li">

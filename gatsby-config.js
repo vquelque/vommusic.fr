@@ -23,15 +23,13 @@ module.exports = {
     },
     `gatsby-transformer-json`,
     `gatsby-plugin-react-helmet`,
-    // // make sure to put last in the array
-    // {
-    //   resolve: `gatsby-plugin-netlify`,
-    //   options: {
-    //     headers: {
-    //       "/*": ["Access-Control-Allow-Origin: *"],
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-114030019-1",
+      },
+    },
   ],
   siteMetadata: {
     title: "VOM - DJ Club & Discomobile - Animation, Sonorisation, Éclairage",

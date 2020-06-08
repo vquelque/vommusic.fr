@@ -32,9 +32,10 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "VOM - DJ Club & Discomobile - Animation, Sonorisation, Éclairage",
+    title:
+      "VOM - DJ - Animation, Sonorisation, Éclairage - Anniversaire, Mariage, Soirée Étudiante, Soirée de Rallye - Ile de France, Seine et Marne 77, Paris 75, Fontainebleau",
     description:
-      "DJ, vous faire danser, c'est mon métier. Soirée privée, soirée d'entreprise, rallye, clubbing ? Disco, Pop, Hip Hop, House ? Il en faut pour tous les goûts. Disponible autour de Paris, en Seine et Marne 77, Fontainebleau, Melun.",
+      "DJ, vous faire danser, c'est mon métier. Soirée privée, soirée d'entreprise, soirée de rallye, clubbing ? Disco, Pop, Hip Hop, House ? Il en faut pour tous les goûts. Disponible autour de Paris, Fontainebleau, Melun, Seine et Marne 77, Ile de France",
     siteUrl: "https://www.vommusic.fr/",
   },
 }

@@ -237,9 +237,9 @@ const FullpageWrapper = fullpageProps => (
                       "Un bon croquis vaut mieux qu'un long discours"
                     </h2>
                     <p className="text-center text-justify">
-                      Parce qu'on peut faire autre chose que mettre les mains en
-                      l'air quand on est DJ, voilà quelques exemples de mix un
-                      peu plus techniques filmés dans le studio.
+                      Parce le DJ peut faire autre chose que mettre les mains en
+                      l'air, voilà quelques exemples de mix filmés en live ou en
+                      studio.
                     </p>
                   </div>
                 </div>

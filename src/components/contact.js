@@ -16,6 +16,11 @@ const Contact = () => {
       form.reset()
     }
   }
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
   const handleOnSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -23,7 +28,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
+      body: encode({ "form-name": "contact", form }),
     })
       .then(r => {
         handleServerResponse(true, "Bien reçu, merci!", form)

@@ -55,7 +55,15 @@ const Contact = () => {
       className="contact-form"
       onSubmit={handleOnSubmit}
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
+      <p hidden>
+        <label>
+          Don’t fill this out:{" "}
+          <input name="bot-field" onChange={handleChange} />
+        </label>
+      </p>
+      <p></p>
       <div className="controls">
         <div className="form-group">
           <label htmlFor="name">Nom *</label>

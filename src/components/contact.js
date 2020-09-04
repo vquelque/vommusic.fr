@@ -23,6 +23,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state }),
     })
       .then(r => {
         handleServerResponse(true, "Bien reçu, merci!", form)
@@ -39,6 +40,8 @@ const Contact = () => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
+      <input type="hidden" name="bot-field" />{" "}
+      <input type="hidden" name="form-name" value="contact" />
       <div className="controls">
         <div className="form-group">
           <label htmlFor="name">Nom *</label>
@@ -84,7 +87,6 @@ const Contact = () => {
           />
         </div>
       </div>
-      <input type="hidden" name="form-name" value="contact" />
       {serverState.status && (
         <p className={!serverState.status.ok ? "errorMsg" : ""}>
           {serverState.status.msg}

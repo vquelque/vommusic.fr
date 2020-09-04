@@ -9,7 +9,6 @@ const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [botField, setBotField] = useState(false)
 
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
@@ -40,7 +39,6 @@ const Contact = () => {
         name: name,
         email: email,
         message: message,
-        "bot-field": botField,
       }),
     })
       .then(r => {
@@ -57,15 +55,8 @@ const Contact = () => {
       className="contact-form"
       onSubmit={handleOnSubmit}
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       <div className="controls">
-        <input
-          hidden
-          name="bot-field"
-          onChange={e => setBotField(e.target.value)}
-        />
-
         <div className="form-group">
           <label htmlFor="name">Nom *</label>
           <input

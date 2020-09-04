@@ -35,7 +35,7 @@ const Contact = () => {
       method: "post",
       url: "/",
       data: encode({
-        "form-name": form.getAttribute("name"),
+        "form-name": form.getAttribute("form-name"),
         name: name,
         email: email,
         message: message,
@@ -50,6 +50,7 @@ const Contact = () => {
   }
   return (
     <form
+      name="contact"
       id="contact-form"
       className="contact-form"
       onSubmit={handleOnSubmit}

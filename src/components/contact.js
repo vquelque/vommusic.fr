@@ -60,17 +60,12 @@ const Contact = () => {
       data-netlify-honeypot="bot-field"
     >
       <div className="controls">
-        <div className="form-group">
-          <div hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input
-                name="bot-field"
-                onChange={e => setBotField(e.target.value)}
-              />
-            </label>
-          </div>
-        </div>
+        <input
+          hidden
+          name="bot-field"
+          onChange={e => setBotField(e.target.value)}
+        />
+
         <div className="form-group">
           <label htmlFor="name">Nom *</label>
           <input

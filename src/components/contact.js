@@ -5,13 +5,19 @@ const Contact = () => {
     submitting: false,
     status: null,
   })
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
       status: { ok, msg },
     })
     if (ok) {
-      form.reset()
+      setName("")
+      setEmail("")
+      setMessage("")
     }
   }
   const encode = data => {
@@ -29,9 +35,9 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        name: form.name,
-        email: form.email,
-        message: form.message,
+        name: name,
+        email: email,
+        message: message,
       }),
     })
       .then(r => {
@@ -61,6 +67,8 @@ const Contact = () => {
             required="required"
             className="form-control"
             aria-label="name placeholder"
+            value={name}
+            onChange={setName}
           />
         </div>
         <div className="form-group">
@@ -70,6 +78,8 @@ const Contact = () => {
             name="email"
             placeholder="Entrez votre email"
             required="required"
+            value={email}
+            onChange={setEmail}
             className="form-control"
             aria-label="email placeholder"
           />
@@ -83,11 +93,13 @@ const Contact = () => {
             required="required"
             className="form-control"
             aria-label="message placeholder"
+            value={message}
+            onChange={setMessage}
           ></textarea>
         </div>
 
         <div className="text-center">
-          <button
+          <input
             type="submit"
             value="Envoyer"
             className="btn btn-primary btn-block"

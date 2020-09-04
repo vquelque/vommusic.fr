@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import axios from "axios"
-import * as qs from "query-string"
 
 const Contact = () => {
   const [serverState, setServerState] = useState({
@@ -21,7 +19,7 @@ const Contact = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
-  const handleChange = e => this.setState({ [e.target.name]: e.target.value })
+
   const handleOnSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -31,9 +29,9 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message,
+        name: form.name,
+        email: form.email,
+        message: form.message,
       }),
     })
       .then(r => {
@@ -60,8 +58,6 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Entrez votre nom"
-            value={name}
-            onChange={handleChange}
             required="required"
             className="form-control"
             aria-label="name placeholder"
@@ -73,8 +69,6 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Entrez votre email"
-            value={email}
-            onChange={handleChange}
             required="required"
             className="form-control"
             aria-label="email placeholder"
@@ -86,8 +80,6 @@ const Contact = () => {
             rows="4"
             name="message"
             placeholder="Votre message !"
-            value={message}
-            onChange={handleChange}
             required="required"
             className="form-control"
             aria-label="message placeholder"

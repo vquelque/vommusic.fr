@@ -68,7 +68,7 @@ const Contact = () => {
             className="form-control"
             aria-label="name placeholder"
             value={name}
-            onChange={() => setName(this.value)}
+            onChange={e => setName(e.target.value)}
           />
         </div>
         <div className="form-group">
@@ -79,7 +79,7 @@ const Contact = () => {
             placeholder="Entrez votre email"
             required="required"
             value={email}
-            onChange={() => setEmail(this.value)}
+            onChange={e => setEmail(e.target.value)}
             className="form-control"
             aria-label="email placeholder"
           />
@@ -94,7 +94,7 @@ const Contact = () => {
             className="form-control"
             aria-label="message placeholder"
             value={message}
-            onChange={() => setMessage(this.value)}
+            onChange={e => setMessage(e.target.value)}
           ></textarea>
         </div>
 

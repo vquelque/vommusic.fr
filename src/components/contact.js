@@ -21,8 +21,8 @@ const Contact = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
-  handleChange = e => this.setState({ [e.target.name]: e.target.value })
-  handleOnSubmit = e => {
+  const handleChange = e => this.setState({ [e.target.name]: e.target.value })
+  const handleOnSubmit = e => {
     e.preventDefault()
     const form = e.target
     setServerState({ submitting: true })
@@ -47,7 +47,7 @@ const Contact = () => {
     <form
       id="contact-form"
       className="contact-form"
-      onSubmit={this.handleOnSubmit}
+      onSubmit={handleOnSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
@@ -61,7 +61,7 @@ const Contact = () => {
             name="name"
             placeholder="Entrez votre nom"
             value={name}
-            onChange={this.handleChange}
+            onChange={handleChange}
             required="required"
             className="form-control"
             aria-label="name placeholder"
@@ -74,7 +74,7 @@ const Contact = () => {
             name="email"
             placeholder="Entrez votre email"
             value={email}
-            onChange={this.handleChange}
+            onChange={handleChange}
             required="required"
             className="form-control"
             aria-label="email placeholder"
@@ -87,7 +87,7 @@ const Contact = () => {
             name="message"
             placeholder="Votre message !"
             value={message}
-            onChange={this.handleChange}
+            onChange={handleChange}
             required="required"
             className="form-control"
             aria-label="message placeholder"

@@ -50,7 +50,7 @@ const Contact = () => {
   }
   return (
     <form
-      name="contact"
+      name="contact-form"
       id="contact-form"
       className="contact-form"
       onSubmit={handleOnSubmit}

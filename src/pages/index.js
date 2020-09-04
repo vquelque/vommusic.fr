@@ -277,8 +277,8 @@ const FullpageWrapper = fullpageProps => (
           <section className="section" id="page6" data-anchor="contact">
             <div className="content">
               <div className="container clearfix">
+                <h2 className="heading">Me contacter</h2>
                 <div className="row">
-                  <h2 className="heading">Me contacter</h2>
                   <div className="col-lg-6">
                     <Contact />
                   </div>

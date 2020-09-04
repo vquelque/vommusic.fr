@@ -35,7 +35,7 @@ const Contact = () => {
       method: "post",
       url: "/",
       data: encode({
-        "form-name": form.getAttribute("form-name"),
+        "form-name": form.getAttribute("name"),
         name: name,
         email: email,
         message: message,
@@ -56,7 +56,6 @@ const Contact = () => {
       onSubmit={handleOnSubmit}
       data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="contact" />
       <div className="controls">
         <div className="form-group">
           <label htmlFor="name">Nom *</label>

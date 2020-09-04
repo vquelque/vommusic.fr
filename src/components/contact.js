@@ -21,7 +21,7 @@ const Contact = () => {
     setServerState({ submitting: true })
     axios({
       method: "post",
-      url: "https://getform.io/f/8e9a00ca-bcff-41d7-9599-c6861ccff761",
+      url: "/",
       data: new FormData(form),
     })
       .then(r => {
@@ -32,7 +32,13 @@ const Contact = () => {
       })
   }
   return (
-    <form id="contact-form" className="contact-form" onSubmit={handleOnSubmit}>
+    <form
+      id="contact-form"
+      className="contact-form"
+      onSubmit={handleOnSubmit}
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <div className="controls">
         <div className="form-group">
           <label htmlFor="name">Nom *</label>
@@ -78,6 +84,7 @@ const Contact = () => {
           />
         </div>
       </div>
+      <input type="hidden" name="form-name" value="contact" />
       {serverState.status && (
         <p className={!serverState.status.ok ? "errorMsg" : ""}>
           {serverState.status.msg}

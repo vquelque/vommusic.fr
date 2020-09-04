@@ -35,9 +35,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        name: name,
-        email: email,
-        message: message,
+        ...this.state,
       }),
     })
       .then(r => {

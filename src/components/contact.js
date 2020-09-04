@@ -21,14 +21,20 @@ const Contact = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
-  const handleOnSubmit = e => {
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
+  handleOnSubmit = e => {
     e.preventDefault()
     const form = e.target
     setServerState({ submitting: true })
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", form }),
+      body: encode({
+        "form-name": "contact",
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+      }),
     })
       .then(r => {
         handleServerResponse(true, "Bien reçu, merci!", form)
@@ -41,7 +47,7 @@ const Contact = () => {
     <form
       id="contact-form"
       className="contact-form"
-      onSubmit={handleOnSubmit}
+      onSubmit={this.handleOnSubmit}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
@@ -54,6 +60,8 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Entrez votre nom"
+            value={name}
+            onChange={this.handleChange}
             required="required"
             className="form-control"
             aria-label="name placeholder"
@@ -65,6 +73,8 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Entrez votre email"
+            value={email}
+            onChange={this.handleChange}
             required="required"
             className="form-control"
             aria-label="email placeholder"
@@ -76,6 +86,8 @@ const Contact = () => {
             rows="4"
             name="message"
             placeholder="Votre message !"
+            value={message}
+            onChange={this.handleChange}
             required="required"
             className="form-control"
             aria-label="message placeholder"
@@ -83,7 +95,7 @@ const Contact = () => {
         </div>
 
         <div className="text-center">
-          <input
+          <button
             type="submit"
             value="Envoyer"
             className="btn btn-primary btn-block"

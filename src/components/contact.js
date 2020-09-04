@@ -70,62 +70,62 @@ const Contact = () => {
               />
             </label>
           </div>
-          <div className="form-group">
-            <label htmlFor="name">Nom *</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Entrez votre nom"
-              required="required"
-              className="form-control"
-              aria-label="name placeholder"
-              value={name}
-              onChange={e => setName(e.target.value)}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email *</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Entrez votre email"
-              required="required"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              className="form-control"
-              aria-label="email placeholder"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Votre message *</label>
-            <textarea
-              rows="4"
-              name="message"
-              placeholder="Votre message !"
-              required="required"
-              className="form-control"
-              aria-label="message placeholder"
-              value={message}
-              onChange={e => setMessage(e.target.value)}
-            ></textarea>
-          </div>
-
-          <div className="text-center">
-            <input
-              type="submit"
-              value="Envoyer"
-              className="btn btn-primary btn-block"
-              aria-label="send button"
-              disabled={serverState.submitting}
-            />
-          </div>
         </div>
-        {serverState.status && (
-          <p className={!serverState.status.ok ? "errorMsg" : ""}>
-            {serverState.status.msg}
-          </p>
-        )}
+        <div className="form-group">
+          <label htmlFor="name">Nom *</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Entrez votre nom"
+            required="required"
+            className="form-control"
+            aria-label="name placeholder"
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email *</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Entrez votre email"
+            required="required"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            className="form-control"
+            aria-label="email placeholder"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Votre message *</label>
+          <textarea
+            rows="4"
+            name="message"
+            placeholder="Votre message !"
+            required="required"
+            className="form-control"
+            aria-label="message placeholder"
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+          ></textarea>
+        </div>
+
+        <div className="text-center">
+          <input
+            type="submit"
+            value="Envoyer"
+            className="btn btn-primary btn-block"
+            aria-label="send button"
+            disabled={serverState.submitting}
+          />
+        </div>
       </div>
+      {serverState.status && (
+        <p className={!serverState.status.ok ? "errorMsg" : ""}>
+          {serverState.status.msg}
+        </p>
+      )}
     </form>
   )
 }

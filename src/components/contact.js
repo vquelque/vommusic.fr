@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import axios from "axios"
+import * as qs from "query-string"
 
 const Contact = () => {
   const [serverState, setServerState] = useState({
@@ -20,9 +21,10 @@ const Contact = () => {
     const form = e.target
     setServerState({ submitting: true })
     axios({
+      url: this.props.location.pathname,
       method: "post",
-      url: "https://www.vommusic.fr/",
-      data: new FormData(form),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      data: qs.stringify(formData),
     })
       .then(r => {
         handleServerResponse(true, "Bien reçu, merci!", form)

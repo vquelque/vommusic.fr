@@ -9,6 +9,7 @@ const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const [botField, setBotField] = useState(false)
 
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
@@ -39,6 +40,7 @@ const Contact = () => {
         name: name,
         email: email,
         message: message,
+        "bot-field": botField,
       }),
     })
       .then(r => {
@@ -60,7 +62,7 @@ const Contact = () => {
       <p hidden>
         <label>
           Don’t fill this out:{" "}
-          <input name="bot-field" onChange={handleChange} />
+          <input name="bot-field" onChange={e => setBotField(e.target.value)} />
         </label>
       </p>
       <p></p>

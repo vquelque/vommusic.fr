@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import axios from "axios"
 
 const Contact = () => {
   const [serverState, setServerState] = useState({
@@ -30,10 +31,10 @@ const Contact = () => {
     e.preventDefault()
     const form = e.target
     setServerState({ submitting: true })
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
+    axios({
+      method: "post",
+      url: "/",
+      data: encode({
         "form-name": form.getAttribute("name"),
         name: name,
         email: email,
@@ -51,7 +52,6 @@ const Contact = () => {
     <form
       id="contact-form"
       className="contact-form"
-      method="POST"
       onSubmit={handleOnSubmit}
       data-netlify="true"
     >

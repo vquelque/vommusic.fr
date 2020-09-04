@@ -21,7 +21,7 @@ const Contact = () => {
     setServerState({ submitting: true })
     axios({
       method: "post",
-      url: "/",
+      url: this.props.location.pathname,
       data: new FormData(form),
     })
       .then(r => {

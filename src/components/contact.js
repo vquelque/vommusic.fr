@@ -20,11 +20,9 @@ const Contact = () => {
     e.preventDefault()
     const form = e.target
     setServerState({ submitting: true })
-    axios({
-      url: this.props.location.pathname,
-      method: "post",
+    fetch("/", {
+      method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      data: qs.stringify(formData),
     })
       .then(r => {
         handleServerResponse(true, "Bien reçu, merci!", form)
